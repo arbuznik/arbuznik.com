@@ -1,0 +1,9 @@
+{
+  "name": "gatsby-remark-obsidian-relative-links",
+  "description": "Gatsby plugin for parsing markdown relative links from obsidian",
+  "version": "0.0.1",
+  "author": "Arbuzov Nikita",
+  "dependencies": {
+    "unist-util-visit": "^2.0.3"
+  }
+}

@@ -14,14 +14,24 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arbuznik/arbuznik.com"
+  },
   "dependencies": {
     "gatsby": "^5.6.1",
     "gatsby-plugin-image": "^3.7.0",
+    "gatsby-plugin-manifest": "^5.7.0",
     "gatsby-plugin-sharp": "^5.7.0",
+    "gatsby-remark-autolink-headers": "^6.7.0",
+    "gatsby-remark-images": "^7.7.0",
+    "gatsby-remark-prismjs": "^7.7.0",
     "gatsby-source-filesystem": "^5.7.0",
     "gatsby-transformer-remark": "^6.7.0",
     "gatsby-transformer-sharp": "^5.7.0",
+    "prismjs": "^1.29.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0"
   }
 }
