@@ -12,13 +12,14 @@ module.exports = ({ markdownAST }) => {
         .replaceAll(/\s/g, "-")
         .toLowerCase();
 
-      // remove .md extension
-      node.url = node.url.replace(/.md$/, "");
-      node.url = node.url.replace(/\.md/, "/");
+      // remove index.md from path
+      if (node.url.startsWith("../")) {
+        node.url = node.url.replace("index.md", "");
+      }
 
-      // up one level for relative links
-      if (!node.url.startsWith("#") && !node.url.startsWith("/")) {
-        node.url = "../" + node.url;
+      // down one level for relative links
+      if (!node.url.startsWith("../") && !node.url.startsWith("#")) {
+        node.url = node.url.slice(3);
       }
     }
   });
