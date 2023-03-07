@@ -1,10 +1,11 @@
 import * as React from "react";
 import { graphql } from "gatsby";
+import SEO from "../components/seo/SEO";
 
-export default function ProjectPostTemplate({ data }) {
+const ProjectPostTemplate = ({ data }) => {
   const { markdownRemark } = data;
   const { frontmatter, html, tableOfContents } = markdownRemark;
-  const { cdate, mdate, slug, title, tags } = frontmatter;
+  const { cdate, title } = frontmatter;
 
   return (
     <section className="post">
@@ -24,16 +25,30 @@ export default function ProjectPostTemplate({ data }) {
       )}
     </section>
   );
-}
+};
+
+export const Head = (props) => (
+  <SEO
+    pathname={props.location.pathname}
+    postType={props.pageContext.postType}
+    description={props.data.markdownRemark.excerpt}
+    title={props.data.markdownRemark.frontmatter.title}
+    dateModified={props.data.markdownRemark.frontmatter.mdate}
+    datePublished={props.data.markdownRemark.frontmatter.cdate}
+  />
+);
+
+export default ProjectPostTemplate;
 
 export const query = graphql`
   query ($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       tableOfContents
+      excerpt
       frontmatter {
         cdate(formatString: "MMMM DD, YYYY")
-        mdate
+        mdate(formatString: "MMMM DD, YYYY")
         slug
         title
         tags

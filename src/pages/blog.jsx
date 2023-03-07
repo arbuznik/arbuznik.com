@@ -1,4 +1,5 @@
 import React from "react";
+import SEO from "../components/seo/SEO";
 import { graphql, Link } from "gatsby";
 
 const Blog = ({ data }) => {
@@ -17,9 +18,13 @@ const Blog = ({ data }) => {
   );
 };
 
+export const Head = (props) => (
+  <SEO pathname={props.location.pathname} title="Blog" />
+);
+
 export default Blog;
 
-export const pageQuery = graphql`
+export const query = graphql`
   {
     allMarkdownRemark(
       sort: { frontmatter: { cdate: DESC } }

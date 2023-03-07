@@ -1,4 +1,5 @@
 import React from "react";
+import SEO from "../components/seo/SEO";
 import { Link } from "gatsby";
 import ExternalIcon from "../images/external-icon";
 
@@ -72,5 +73,13 @@ const ProjectsPage = () => {
     </section>
   );
 };
+
+export const Head = (props) => (
+  <SEO
+    pathname={props.location.pathname}
+    title="Projects"
+    description="Web apps by Nikita Arbuzov"
+  />
+);
 
 export default ProjectsPage;

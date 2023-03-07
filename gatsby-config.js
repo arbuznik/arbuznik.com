@@ -1,7 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: `arbuznik.com`,
-    siteUrl: `https://www.arbuznik.com`,
+    title: "arbuznik.com",
+    author: "Nikita Arbuzov",
+    description: "Dev blog by Nikita Arbuzov",
+    siteUrl: "https://www.arbuznik.com",
+    siteLogo: "/logo.png",
   },
   plugins: [
     "gatsby-plugin-image",
@@ -12,7 +15,7 @@ module.exports = {
       options: {
         name: "arbuznik.com",
         short_name: "arbuznik.com",
-        description: "Personal blog by Arbuzov Nikita",
+        description: "Dev blog by Nikita Arbuzov",
         start_url: `/`,
         display: `standalone`,
         icon: "src/images/icon.png",

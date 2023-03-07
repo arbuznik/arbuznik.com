@@ -53,6 +53,7 @@ const createPages = async ({ graphql, actions }) => {
       component: postPage,
       context: {
         id: project.node.id,
+        postType: project.node.parent.sourceInstanceName,
       },
     });
   });
@@ -63,6 +64,7 @@ const createPages = async ({ graphql, actions }) => {
       component: postPage,
       context: {
         id: post.node.id,
+        postType: post.node.parent.sourceInstanceName,
       },
     });
   });

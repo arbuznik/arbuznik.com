@@ -1,4 +1,5 @@
 import React from "react";
+import SEO from "../components/seo/SEO";
 import { Link } from "gatsby";
 import "../styles/styles.css";
 import "../styles/prism.css";
@@ -19,5 +20,7 @@ const IndexPage = () => {
     </section>
   );
 };
+
+export const Head = () => <SEO />;
 
 export default IndexPage;
