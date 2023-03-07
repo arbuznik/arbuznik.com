@@ -33,6 +33,7 @@
     --color-forest-green: #219424;
     --color-pink-cardinal: #C7264B;
     --color-violet-grape: #6E00B8;
+    --color-purpureus: #9649cc;
     --color-viridian-green: #0D825F;
     --color-celtic-blue: #0074E0;
 }
@@ -40,7 +41,6 @@
 body {
     margin: 0;
     padding: 0;
-    transition: all 0.2s ease-in;
 }
 
 body.light {
@@ -68,11 +68,13 @@ body.light {
     --codeblock-parameter-color: #61a69b;
     --codeblock-keyword-color: #c792ea;
     --codeblock-string-color: #9d9ca2;
+    --codeblock-number-color: #67AAEA;
+    --codeblock-boolean-color: #C88F79;
 
     --blockquote-background-color: #F5F5DC;
     --blockquote-border-color: #dbbea5;
 
-    --project-snippet-color: var(--color-celtic-blue);
+    --project-snippet-color: var(--color-purpureus);
     --project-snippet-link-color: var(--header-projects-navlink-underline-color);
     --project-snippet-link-hover-color: var(--color-celtic-blue);
     --project-snippet-year-color: var(--text-color-heading-secondary);
@@ -102,12 +104,14 @@ body.dark {
     --codeblock-background-color: #1D1D25;
     --codeblock-selection-color: #29417F;
     --codeblock-text-color: #609CD8;
-    --codeblock-border-color: #9649cc;
+    --codeblock-border-color: var(--color-purpureus);
     --codeblock-function-color: #F6C77B;
     --codeblock-parameter-color: #7fdbca;
     --codeblock-punctuation-color: #f7f7f7;
     --codeblock-keyword-color: #c792ea;
     --codeblock-string-color: #BCBBC3;
+    --codeblock-number-color: #67AAEA;
+    --codeblock-boolean-color: #C88F79;
 
     --blockquote-background-color: #363645;
     --blockquote-border-color: #FF7518;
@@ -121,6 +125,10 @@ body.dark {
     --blog-snippet-link-hover-color: #FFFFFF;
 
     background: var(--background-color);
+}
+
+body.dark .post img {
+    filter: brightness(0.9) contrast(1.2);
 }
 
 *,
@@ -145,16 +153,22 @@ header {
     margin: auto;
     padding: var(--spacer-4);
     max-width: var(--max-header-width);
-    transition: all 0.2s ease-in;
 }
 
-h1,
+h1 {
+    line-height: 1.1;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: var(--text-color-default)
+}
+
 h2,
 h3,
 h4,
 h5 {
     line-height: 1.1;
-    margin-top: 2rem;
+    margin-top: 3rem;
     margin-bottom: 1rem;
     font-weight: 600;
     color: var(--text-color-default)
@@ -329,9 +343,9 @@ a.anchor {
     gap: var(--spacer-1);
     align-items: center;
     border-radius: var(--block-border-radius);
-    transition: all .3s ease-in;
+    transition: all 0.1s ease-in;
     color: white;
-    background: linear-gradient(63.18deg, var(--blockquote-border-color) 0%, var(--project-snippet-color) 100%);
+    background: linear-gradient(63.18deg, var(--header-projects-navlink-underline-color) 0%, var(--project-snippet-color) 100%);
     padding: var(--spacer-2) var(--spacer-4);
 }
 
@@ -343,7 +357,7 @@ a.anchor {
     display: flex;
     gap: var(--spacer-1);
     align-items: center;
-    transition: all .3s ease-in;
+    transition: all 0.1s ease-in;
     color: var(--project-snippet-link-color);
 }
 
@@ -363,8 +377,29 @@ a.anchor {
     margin: 0.5rem 0;
 }
 
+.blog-entry a {
+    transition: all .1s ease-in;
+}
+
 .post-toc-container {
     display: none;
+}
+
+.post table {
+    border-collapse: collapse;
+}
+
+.post table th,
+.post table td {
+    padding: var(--spacer-2) var(--spacer-4);
+    border: 1px solid var(--codeblock-border-color);
+    color: var(--text-color-default);
+    text-align: left;
+}
+
+.post table th {
+    background-color: var(--codeblock-background-color);
+    color: var(--text-color-default)
 }
 
 .timestamp {

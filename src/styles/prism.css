@@ -75,9 +75,16 @@ pre[class*="language-"] {
 }
 
 .token.operator,
-.token.boolean,
-.token.number {
+.token.boolean {
     color: #c76b29;
+}
+
+.token.number {
+    color: var(--codeblock-number-color);
+}
+
+.token.boolean {
+    color: var(--codeblock-boolean-color);
 }
 
 .token.property {
