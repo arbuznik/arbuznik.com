@@ -3,31 +3,25 @@ import { Link } from "gatsby";
 import { Toggle } from "../toggle/Toggle";
 
 const Layout = ({ children }) => {
-  const [darkTheme, setDarkTheme] = useState(false);
+  const [theme, setTheme] = useState(null);
   const [logoRotation, setLogoRotation] = useState(0);
 
   useEffect(() => {
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
+    const savedTheme = localStorage.getItem("theme");
+    const prefferedTheme = window.matchMedia("(prefers-color-scheme: dark)")
+      .matches
+      ? "dark"
+      : "light";
 
-    if (prefersDark) {
-      setDarkTheme(true);
-      document.body.className = "dark";
-    }
+    setTheme(savedTheme || prefferedTheme);
+    document.body.className = savedTheme || prefferedTheme;
   }, []);
 
-  // TODO: turn on the local storage
-  // useEffect(() => {
-  // const savedTheme = localStorage.getItem("theme");
-  // if (savedTheme) {
-  //   setTheme(theme);
-  // document.body.className = theme;
-  // }
-  // }, []);
-
-  const changeTheme = () => {
-    setDarkTheme(!darkTheme);
-    document.body.className = darkTheme ? "light" : "dark";
-    // localStorage.setItem("theme", newTheme);
+  const toggleTheme = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+    localStorage.setItem("theme", newTheme);
+    document.body.className = newTheme;
   };
 
   const handleLogoClick = () => {
@@ -88,7 +82,7 @@ const Layout = ({ children }) => {
               </Link>
             </li>
           </ul>
-          <Toggle checked={darkTheme} onClick={changeTheme} />
+          {theme && <Toggle checked={theme === "dark"} onClick={toggleTheme} />}
         </div>
       </header>
       <main>{children}</main>
