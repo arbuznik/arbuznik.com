@@ -2,27 +2,7 @@ import React from "react";
 import SEO from "../components/seo/SEO";
 import { Link } from "gatsby";
 import ExternalIcon from "../images/external-icon";
-
-const projects = [
-  {
-    id: 1,
-    name: "Know your name",
-    description: "Make assumptions on person given the game",
-    year: 2021,
-    demoURL: "https://arbuznik.github.io/know-your-name/",
-    articleURL: "/projects/know-your-name/",
-    codeURL: "https://github.com/arbuznik/know-your-name",
-  },
-  {
-    id: 0,
-    name: "Bulls and Cows",
-    description: "Classic game of numbers",
-    year: 2021,
-    demoURL: "https://arbuznik.github.io/bulls-and-cows/",
-    articleURL: "/projects/bulls-and-cows/",
-    codeURL: "https://github.com/arbuznik/bulls-and-cows",
-  },
-];
+import { projects } from "../constants/constants";
 
 const ProjectsPage = () => {
   return (
@@ -30,7 +10,16 @@ const ProjectsPage = () => {
       <h1>Projects</h1>
       <div className="projects-list">
         {projects.map(
-          ({ id, name, description, year, demoURL, articleURL, codeURL }) => (
+          ({
+            id,
+            name,
+            description,
+            year,
+            demoURL,
+            articleURL,
+            codeURL,
+            codeBackendURL,
+          }) => (
             <article className="project-snippet" key={id}>
               <div className="project-snippet-heading">
                 <h2>{name}</h2>
@@ -38,7 +27,7 @@ const ProjectsPage = () => {
               </div>
               <p className="project-snippet-description">{description}</p>
               <ul className="project-snippet-links">
-                <li>
+                <li className="project-snippet-demo-link-container">
                   <a
                     className="project-snippet-demo-link"
                     href={demoURL}
@@ -65,6 +54,19 @@ const ProjectsPage = () => {
                     <ExternalIcon />
                   </a>
                 </li>
+                {codeBackendURL && (
+                  <li>
+                    <a
+                      className="project-snippet-link"
+                      href={codeBackendURL}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      API Source
+                      <ExternalIcon />
+                    </a>
+                  </li>
+                )}
               </ul>
             </article>
           )

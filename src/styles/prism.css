@@ -45,7 +45,7 @@ code[class*="language-"]::selection, code[class*="language-"] ::selection {
     margin-top: 1em;
 }
 pre[class*="language-"] {
-    margin: .5em 0;
+    margin: 2em 0;
     overflow: auto;
     padding: 1em;
     border-radius: var(--block-border-radius);
