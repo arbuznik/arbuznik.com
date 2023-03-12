@@ -26,7 +26,8 @@ module.exports = {
       options: {
         plugins: [
           "gatsby-remark-obsidian-relative-links",
-          `gatsby-remark-smartypants`,
+          "gatsby-remark-smartypants",
+          "gatsby-remark-external-links",
           {
             resolve: `gatsby-remark-autolink-headers`,
             options: {
