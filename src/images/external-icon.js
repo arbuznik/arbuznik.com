@@ -1,11 +1,15 @@
 import React from "react";
 
-const ExternalIcon = () => {
+const ExternalIcon = ({
+  width = "1rem",
+  height = "1rem",
+  color = "currentColor",
+}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
-      style={{ width: "1rem", height: "1rem", fill: "currentColor" }}
+      style={{ width, height, fill: color }}
     >
       <g data-name="Layer 2">
         <g data-name="external-link">

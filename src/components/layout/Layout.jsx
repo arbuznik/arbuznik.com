@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "gatsby";
 import { Toggle } from "../toggle/Toggle";
+import ExternalIcon from "../../images/external-icon";
 
 const Layout = ({ children }) => {
   const [theme, setTheme] = useState(null);
@@ -59,7 +60,7 @@ const Layout = ({ children }) => {
                 activeClassName="active"
                 to="/projects"
               >
-                Projects
+                <span>Projects</span>
               </Link>
             </li>
             <li>
@@ -68,18 +69,19 @@ const Layout = ({ children }) => {
                 activeClassName="active"
                 to="/blog"
               >
-                Blog
+                <span>Blog</span>
               </Link>
             </li>
-            <li>
-              <Link className="nav-link" to="/404">
-                404
-              </Link>
-            </li>
-            <li>
-              <Link className="nav-link" to="/4dsolf04">
-                404 dev
-              </Link>
+            <li className="nav-link_no-mobile">
+              <a
+                href="https://github.com/arbuznik"
+                target="_blank"
+                rel="noreferrer"
+                className="nav-link nav-link_github"
+              >
+                <span>GitHub&nbsp;</span>
+                <ExternalIcon width="20px" height="20px" />
+              </a>
             </li>
           </ul>
           {theme && <Toggle checked={theme === "dark"} onClick={toggleTheme} />}
