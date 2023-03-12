@@ -151,11 +151,34 @@ html {
     font-kerning: normal;
 }
 
+.layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 main,
 header {
     margin: auto;
     padding: var(--main-padding-small);
+    width: 100%;
     max-width: var(--max-header-width);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1;
+}
+
+footer {
+    margin-top: 20px;
+}
+
+footer p {
+    text-align: center;
+    color: var(--text-color-heading-secondary);
+    font-size: var(--font-size-xs);
 }
 
 h1 {
@@ -211,10 +234,6 @@ p {
 
 a {
     text-decoration: none;
-}
-
-.post {
-    margin: auto;
 }
 
 .section-content a {

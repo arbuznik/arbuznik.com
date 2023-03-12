@@ -29,7 +29,7 @@ const Layout = ({ children }) => {
   };
 
   return (
-    <>
+    <div className="layout">
       <header className="header">
         <Link
           className="site-link"
@@ -86,7 +86,13 @@ const Layout = ({ children }) => {
         </div>
       </header>
       <main>{children}</main>
-    </>
+      <footer className="footer">
+        <p>
+          2022&nbsp;&mdash;&nbsp;{new Date().getFullYear()} Made by Arbuznik
+          with Gatsby
+        </p>
+      </footer>
+    </div>
   );
 };
 
