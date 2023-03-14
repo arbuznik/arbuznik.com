@@ -1,18 +1,16 @@
 import React from "react";
 import SEO from "../components/seo/SEO";
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
+import BlogSnippet from "../components/blog-snippet/BlogSnippet";
 
 const Blog = ({ data }) => {
   const { allMarkdownRemark } = data;
 
   return (
     <section className="blog">
-      <h1>Blog</h1>
+      <h1>Blog&nbsp;&nbsp;📝</h1>
       {allMarkdownRemark.edges.map(({ node }) => (
-        <div className="blog-entry" key={node.id}>
-          <p className="blog-entry-date">{node.frontmatter.cdate}</p>
-          <Link to={node.frontmatter.slug}>{node.frontmatter.title}</Link>
-        </div>
+        <BlogSnippet key={node.id} post={node} />
       ))}
     </section>
   );
@@ -35,8 +33,7 @@ export const query = graphql`
           id
           frontmatter {
             cdate(formatString: "MMM YYYY")
-            mdate
-            isPublished
+            mdate(formatString: "MMM YYYY")
             slug
             title
             tags

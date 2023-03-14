@@ -33,7 +33,7 @@ const Layout = ({ children }) => {
     <div className="layout">
       <header className="header">
         <Link
-          className="site-link"
+          className="site-link watermelon"
           style={{ transform: `rotate(${logoRotation}deg)` }}
           onClick={handleLogoClick}
           to="/"
@@ -44,6 +44,7 @@ const Layout = ({ children }) => {
           <ul className="nav-links">
             <li className="nav-link-icon">
               <Link
+                className="watermelon"
                 style={{
                   display: "block",
                   transform: `rotate(${logoRotation}deg)`,
@@ -91,7 +92,7 @@ const Layout = ({ children }) => {
       <footer className="footer">
         <p>
           2022&nbsp;&mdash;&nbsp;{new Date().getFullYear()} Made by Arbuznik
-          with Gatsby
+          with ♡️ and Gatsby
         </p>
       </footer>
     </div>

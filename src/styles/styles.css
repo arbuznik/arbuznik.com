@@ -8,8 +8,8 @@
     Arial, sans-serif;
 
     --font-size-xs: 12px;
-    --font-size-small: 14px;
-    --font-size-default: 16px;
+    --font-size-small: 16px;
+    --font-size-default: 18px;
     --font-size-medium: 20px;
     --font-size-large: 24px;
     --font-size-xl: 36px;
@@ -238,8 +238,36 @@ a {
     text-decoration: none;
 }
 
+.watermelon {
+    transition: all 0.05s ease-in;
+}
+
+.intro {
+    padding: 0;
+    margin: 0;
+}
+
+.index-section-subheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.index-section-link {
+    font-weight: bold;
+    color: var(--codeblock-border-color);
+    transition: all 0.1s ease-in;
+}
+
+.index-section-link_type_blog {
+    color: var(--blog-snippet-link-color);
+}
+
+.index-section-link:hover {
+    color: var(--blog-snippet-link-hover-color);
+}
+
 .section-content a {
-    margin: auto;
     text-decoration: underline;
     color: var(--default-link-color);
 }
@@ -249,12 +277,12 @@ a {
     color: var(--default-link-hover-color);
 }
 
-.blog a {
+.blog a:not(.index-section-link) {
     color: var(--blog-snippet-link-color);
     font-weight: bold;
 }
 
-.blog a:hover {
+.blog a:not(.index-section-link):hover {
     color: var(--blog-snippet-link-hover-color);
 }
 
@@ -371,11 +399,9 @@ a.anchor {
 }
 
 .project-snippet-links {
-    display: grid;
-    grid-template-columns: max-content max-content minmax(max-content, auto);
-    column-gap: var(--spacer-2);
+    display: flex;
+    flex-direction: column;
     row-gap: var(--spacer-4);
-    align-items: center;
     font-weight: bold;
 }
 
@@ -418,7 +444,6 @@ a.anchor {
     display: flex;
     align-items: center;
     gap: var(--spacer-4);
-    border-bottom: 1px solid var(--text-color-heading-secondary);
     max-width: var(--max-content-width);
 }
 
@@ -468,6 +493,14 @@ a.anchor {
     font-size: 148px;
 }
 
+.utterances {
+    margin: 0;
+}
+
+.comments-header {
+    font-size: var(--font-size-xl);
+}
+
 @media (min-width: 425px) {
     main,
     header {
@@ -483,6 +516,8 @@ a.anchor {
     }
 
     .project-snippet-links {
+        display: grid;
+        grid-template-columns: max-content max-content minmax(max-content, auto);
         column-gap: var(--spacer-4);
     }
 
@@ -506,6 +541,7 @@ a.anchor {
 
     .project-snippet-links {
         grid-template-columns: repeat(4, max-content);
+        align-items: center;
     }
 
     .project-snippet-demo-link-container {

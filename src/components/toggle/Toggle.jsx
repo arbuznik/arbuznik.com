@@ -8,13 +8,23 @@ export const Toggle = ({ checked, onClick }) => {
     <div
       className={"toggle" + (checked ? " toggle--checked" : "")}
       onClick={onClick}
+      onKeyDown={onClick}
+      tabIndex={0}
+      aria-checked={checked}
+      role="switch"
     >
       <div className="toggle-track">
         <div className="toggle-track-check">
-          <img src={moon} role="presentation" width="16" height="16" />
+          <img
+            src={moon}
+            role="presentation"
+            alt="moon"
+            width="16"
+            height="16"
+          />
         </div>
         <div className="toggle-track-x">
-          <img src={sun} role="presentation" width="16" height="16" />
+          <img src={sun} role="presentation" alt="sun" width="16" height="16" />
         </div>
       </div>
       <div className="toggle-thumb" />

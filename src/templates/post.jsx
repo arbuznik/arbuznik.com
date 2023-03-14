@@ -1,6 +1,7 @@
 import * as React from "react";
 import { graphql } from "gatsby";
 import SEO from "../components/seo/SEO";
+import Comments from "../components/comments/Comments";
 
 const ProjectPostTemplate = ({ data }) => {
   const { markdownRemark } = data;
@@ -8,22 +9,28 @@ const ProjectPostTemplate = ({ data }) => {
   const { cdate, title } = frontmatter;
 
   return (
-    <section className="post">
-      <article>
-        <h1>{title}</h1>
-        <p className="timestamp">{cdate.toLocaleString()}</p>
-        <div dangerouslySetInnerHTML={{ __html: html }} />
-      </article>
-      {tableOfContents && (
-        <aside className="post-toc-container">
-          <p className="post-toc-header">{title}</p>
-          <div
-            className="post-toc"
-            dangerouslySetInnerHTML={{ __html: tableOfContents }}
-          />
-        </aside>
-      )}
-    </section>
+    <>
+      <section className="post">
+        <article>
+          <h1>{title}</h1>
+          <p className="timestamp">{cdate.toLocaleString()}</p>
+          <div dangerouslySetInnerHTML={{ __html: html }} />
+        </article>
+        {tableOfContents && (
+          <aside className="post-toc-container">
+            <p className="post-toc-header">{title}</p>
+            <div
+              className="post-toc"
+              dangerouslySetInnerHTML={{ __html: tableOfContents }}
+            />
+          </aside>
+        )}
+      </section>
+      <section id="comments">
+        <h3 className="comments-header">Comments</h3>
+        <Comments />
+      </section>
+    </>
   );
 };
 
