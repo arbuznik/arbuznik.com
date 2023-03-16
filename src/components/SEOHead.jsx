@@ -1,7 +1,7 @@
 import React from "react";
-import { useSiteMetadata } from "../../hooks/useSiteMetadata";
+import { useSiteMetadata } from "../hooks/useSiteMetadata";
 
-const SEO = ({
+const SEOHead = ({
   title,
   description,
   image,
@@ -84,6 +84,7 @@ const SEO = ({
   return (
     <>
       <title>{seo.title}</title>
+      <link rel="canonical" href={seo.url} />
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
       <script type="application/ld+json">{JSON.stringify(getJSONLD())}</script>
@@ -113,4 +114,4 @@ const SEO = ({
   );
 };
 
-export default SEO;
+export default SEOHead;

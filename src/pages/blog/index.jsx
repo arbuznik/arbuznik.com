@@ -1,14 +1,14 @@
 import React from "react";
-import SEO from "../components/seo/SEO";
+import SEOHead from "../../components/SEOHead";
 import { graphql } from "gatsby";
-import BlogSnippet from "../components/blog-snippet/BlogSnippet";
+import BlogSnippet from "../../components/BlogSnippet";
 
 const Blog = ({ data }) => {
   const { allMarkdownRemark } = data;
 
   return (
     <section className="blog">
-      <h1>Blog&nbsp;&nbsp;📝</h1>
+      <h1>Blog&nbsp;&nbsp;👨‍💻</h1>
       {allMarkdownRemark.edges.map(({ node }) => (
         <BlogSnippet key={node.id} post={node} />
       ))}
@@ -17,7 +17,7 @@ const Blog = ({ data }) => {
 };
 
 export const Head = (props) => (
-  <SEO pathname={props.location.pathname} title="Blog" />
+  <SEOHead pathname={props.location.pathname} title="Blog" />
 );
 
 export default Blog;

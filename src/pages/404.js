@@ -1,5 +1,5 @@
 import * as React from "react";
-import SEO from "../components/seo/SEO";
+import SEOHead from "../components/SEOHead";
 
 const NotFoundPage = () => {
   return (
@@ -10,7 +10,7 @@ const NotFoundPage = () => {
 };
 
 export const Head = (props) => (
-  <SEO title={404} pathname={props.location.pathname} />
+  <SEOHead title={404} pathname={props.location.pathname} />
 );
 
 export default NotFoundPage;

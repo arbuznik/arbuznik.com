@@ -1,8 +1,8 @@
 import React from "react";
-import SEO from "../components/seo/SEO";
+import SEOHead from "../components/SEOHead";
 import { graphql, Link } from "gatsby";
-import ProjectSnippet from "../components/project-snippet/ProjectSnippet";
-import BlogSnippet from "../components/blog-snippet/BlogSnippet";
+import ProjectSnippet from "../components/ProjectSnippet";
+import BlogSnippet from "../components/BlogSnippet";
 import { projects } from "../constants/projects";
 import "../styles/styles.css";
 import "../styles/prism.css";
@@ -42,7 +42,7 @@ const IndexPage = ({ data }) => {
       </section>
       <section className="blog">
         <div className="index-section-subheader">
-          <h2>Recent posts&nbsp;&nbsp;📝</h2>
+          <h2>Recent posts&nbsp;&nbsp;👨‍💻</h2>
           <Link
             className="index-section-link index-section-link_type_blog"
             to="/blog"
@@ -86,6 +86,6 @@ export const query = graphql`
   }
 `;
 
-export const Head = () => <SEO />;
+export const Head = () => <SEOHead />;
 
 export default IndexPage;

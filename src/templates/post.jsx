@@ -1,7 +1,7 @@
 import * as React from "react";
 import { graphql } from "gatsby";
-import SEO from "../components/seo/SEO";
-import Comments from "../components/comments/Comments";
+import SEOHead from "../components/SEOHead";
+import Comments from "../components/Comments";
 
 const ProjectPostTemplate = ({ data }) => {
   const { markdownRemark } = data;
@@ -35,7 +35,7 @@ const ProjectPostTemplate = ({ data }) => {
 };
 
 export const Head = (props) => (
-  <SEO
+  <SEOHead
     pathname={props.location.pathname}
     postType={props.pageContext.postType}
     description={props.data.markdownRemark.excerpt}

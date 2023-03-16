@@ -1,7 +1,7 @@
 import React from "react";
-import { projects } from "../constants/projects";
-import ProjectSnippet from "../components/project-snippet/ProjectSnippet";
-import SEO from "../components/seo/SEO";
+import { projects } from "../../constants/projects";
+import ProjectSnippet from "../../components/ProjectSnippet";
+import SEOHead from "../../components/SEOHead";
 
 const ProjectsPage = () => {
   return (
@@ -17,7 +17,7 @@ const ProjectsPage = () => {
 };
 
 export const Head = (props) => (
-  <SEO
+  <SEOHead
     pathname={props.location.pathname}
     title="Projects"
     description="Web apps by Nikita Arbuzov"

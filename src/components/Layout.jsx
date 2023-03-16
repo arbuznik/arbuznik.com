@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "gatsby";
-import { Toggle } from "../toggle/Toggle";
-import ExternalIcon from "../../images/external-icon";
+import { Toggle } from "./Toggle";
+import ExternalIcon from "../images/external-icon";
 
 const Layout = ({ children }) => {
   const [theme, setTheme] = useState(null);

@@ -1,6 +1,6 @@
 import React from "react";
-import sun from "../../images/sun.png";
-import moon from "../../images/moon.png";
+import sun from "../images/sun.png";
+import moon from "../images/moon.png";
 import "./Toggle.css";
 
 export const Toggle = ({ checked, onClick }) => {

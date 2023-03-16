@@ -1,5 +1,5 @@
 import React from "react";
-import ExternalIcon from "../../images/external-icon";
+import ExternalIcon from "../images/external-icon";
 import { Link } from "gatsby";
 
 const ProjectSnippet = ({ project }) => {
