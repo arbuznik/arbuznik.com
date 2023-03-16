@@ -17,6 +17,7 @@ module.exports = {
         trackingIds: ["G-DZFKXRCFW1"],
         gtagConfig: {
           cookie_expires: 0,
+          send_page_view: true,
         },
         pluginConfig: {
           head: true,
