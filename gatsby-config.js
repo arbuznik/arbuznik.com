@@ -12,6 +12,18 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: ["G-DZFKXRCFW1"],
+        gtagConfig: {
+          cookie_expires: 0,
+        },
+        pluginConfig: {
+          head: true,
+        },
+      },
+    },
+    {
       resolve: "gatsby-plugin-manifest",
       options: {
         name: "arbuznik.com",
