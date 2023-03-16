@@ -1,3 +1,3 @@
 [submodule "articles"]
 	path = articles
-	url = https://github.com/arbuznik/articles
+	url = git@github.com:arbuznik/articles
