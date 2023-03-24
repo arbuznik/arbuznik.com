@@ -1,5 +1,35 @@
 export const projects = [
   {
+    id: 5,
+    name: "🍉 Arbuznik.com",
+    description:
+      "This blog is built with Gatsby on top of *.md vault managed with Obsidian.",
+    year: 2023,
+    featured: true,
+    codeURL: "https://github.com/arbuznik/arbuznik.com",
+  },
+  {
+    id: 4,
+    name: "👨‍💻 Hacker News",
+    description:
+      "Hacker News reader app. Peculiar API, tree traversal and recursive components.",
+    year: 2022,
+    featured: true,
+    demoURL: "https://arbuznik-hacker-news.netlify.app/",
+    articleURL: "/projects/hacker-news/",
+    codeURL: "https://github.com/arbuznik/hacker-news",
+  },
+  {
+    id: 3,
+    name: "📚 Bookshelf",
+    description:
+      "Browse through vast books catalog. Built on top of Google books API.",
+    year: 2022,
+    featured: true,
+    demoURL: "https://arbuznik-bookshelf.netlify.app/",
+    codeURL: "https://github.com/arbuznik/bookshelf",
+  },
+  {
     id: 2,
     name: "🎬 Movie explorer",
     description:
@@ -14,7 +44,8 @@ export const projects = [
   {
     id: 1,
     name: "🦹 Know your name",
-    description: "Make assumptions on person given the name.",
+    description:
+      "Make assumptions on person given the name. Consolidated data from different sources.",
     year: 2021,
     featured: true,
     demoURL: "https://arbuznik.github.io/know-your-name/",

@@ -24,6 +24,12 @@ pre[class*="language-"] {
     color: var(--codeblock-text-color);
 }
 
+code[class*="language-text"] {
+    display: inline-block;
+    max-width: 100%;
+    white-space: normal;
+}
+
 pre > code[class*="language-"] {
     font-size: 1em;
 }

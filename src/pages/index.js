@@ -15,14 +15,13 @@ const IndexPage = ({ data }) => {
       <section className="section-content">
         <h1>Hi!&nbsp;&nbsp;👋</h1>
         <p className="intro">
-          I am learning to code, and in the process of learning, I realized that
-          I understand better how something works if I read enough information
-          about the subject and present it in the form of a concise note,
-          written with my own words. Here you will find a selection of{" "}
-          <Link to="/blog">such notes</Link>, as well as{" "}
-          <Link to="/projects">projects</Link> that I have made. I made them
-          public because it helps my motivation to study and make more notes. I
-          also hope they will help you on your learning curve.
+          As I'm learning to code, I realized that I understand better how
+          something works if I read enough information about the subject and
+          present it in the form of a concise note, written with my own words.
+          Here you will find a selection of <Link to="/blog">such notes</Link>,
+          as well as <Link to="/projects">projects</Link> that I have made. I
+          made them public because it helps my motivation to study and make more
+          notes. I also hope they will help you on your learning curve.
         </p>
       </section>
       <section>

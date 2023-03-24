@@ -22,22 +22,26 @@ const ProjectSnippet = ({ project }) => {
       </div>
       <p className="project-snippet-description">{description}</p>
       <ul className="project-snippet-links">
-        <li className="project-snippet-demo-link-container">
-          <a
-            className="project-snippet-demo-link"
-            href={demoURL}
-            target="_blank"
-            rel="noreferrer"
-          >
-            Demo
-            <ExternalIcon />
-          </a>
-        </li>
-        <li>
-          <Link className="project-snippet-link" to={articleURL}>
-            Article
-          </Link>
-        </li>
+        {demoURL && (
+          <li className="project-snippet-demo-link-container">
+            <a
+              className="project-snippet-demo-link"
+              href={demoURL}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Demo
+              <ExternalIcon />
+            </a>
+          </li>
+        )}
+        {articleURL && (
+          <li>
+            <Link className="project-snippet-link" to={articleURL}>
+              Article
+            </Link>
+          </li>
+        )}
         <li>
           <a
             className="project-snippet-link"
