@@ -1,5 +1,14 @@
 export const projects = [
   {
+    id: 6,
+    name: "📊 Array sorting",
+    description: "Visualizations of array sorting algorithms",
+    year: 2023,
+    featured: true,
+    demoURL: "https://arbuznik-array-sorting.netlify.app/",
+    codeURL: "https://github.com/arbuznik/a-sort",
+  },
+  {
     id: 5,
     name: "🍉 Arbuznik.com",
     description:
