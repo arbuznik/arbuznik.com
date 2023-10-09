@@ -1,5 +1,15 @@
 export const projects = [
   {
+    id: 7,
+    name: "🎯 How to focus",
+    description:
+      "Responsive one-page about what to do when you can't concentrate",
+    year: 2023,
+    featured: true,
+    demoURL: "https://arbuznik-focus.netlify.app//",
+    codeURL: "https://github.com/arbuznik/focus",
+  },
+  {
     id: 6,
     name: "📊 Array sorting",
     description: "Visualizations of array sorting algorithms",
