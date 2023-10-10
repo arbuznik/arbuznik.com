@@ -8,9 +8,19 @@ const ProjectsPage = () => {
     <section>
       <h1>Projects&nbsp;&nbsp;🛠</h1>
       <div className="projects-list">
-        {projects.map((project) => (
-          <ProjectSnippet key={project.id} project={project} />
-        ))}
+        {projects
+          .filter((project) => !project.designOnly)
+          .map((project) => (
+            <ProjectSnippet key={project.id} project={project} />
+          ))}
+      </div>
+      <h2>Little to no code, but it's all about the looks&nbsp;&nbsp;🌝</h2>
+      <div className="projects-list">
+        {projects
+          .filter((project) => project.designOnly)
+          .map((project) => (
+            <ProjectSnippet key={project.id} project={project} />
+          ))}
       </div>
     </section>
   );

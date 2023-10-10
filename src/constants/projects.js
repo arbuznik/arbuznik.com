@@ -1,18 +1,41 @@
 export const projects = [
   {
-    id: 7,
-    name: "🎯 How to focus",
+    id: 9,
+    name: "🍔 Space burgers",
     description:
-      "Responsive one-page about what to do when you can't concentrate",
+      "Burger constructor. Fullstack MERN. React, Redux, JWT Auth, DnD.",
     year: 2023,
     featured: true,
-    demoURL: "https://arbuznik-focus.netlify.app//",
+    designOnly: false,
+    demoURL: "https://space-burgers.netlify.app/",
+    codeURL: "https://github.com/arbuznik/react-burger",
+  },
+  {
+    id: 8,
+    name: "🎯 How to focus",
+    description:
+      "Responsive one-page about what to do when you can't concentrate.",
+    year: 2023,
+    featured: false,
+    designOnly: true,
+    demoURL: "https://arbuznik-focus.netlify.app/",
     codeURL: "https://github.com/arbuznik/focus",
+  },
+  {
+    id: 7,
+    name: "💳 Eshop payment",
+    description:
+      "Responsive payment screen with smart card form. Nunjucks, Gulp, SCSS.",
+    year: 2023,
+    featured: false,
+    designOnly: true,
+    demoURL: "https://arbuznik-eshop-payment.netlify.app/",
+    codeURL: "https://github.com/arbuznik/sborka-payment",
   },
   {
     id: 6,
     name: "📊 Array sorting",
-    description: "Visualizations of array sorting algorithms",
+    description: "Visualizations of array sorting algorithms.",
     year: 2023,
     featured: true,
     demoURL: "https://arbuznik-array-sorting.netlify.app/",
